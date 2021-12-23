@@ -1,2 +1,5 @@
-make -j16 check V=1 VERBOSE=1 || :
-ctest --parallel 16 -V --progress || :
+make -j1 check V=1 VERBOSE=1 || :
+ctest --parallel 1 -V --progress || :
+pushd src/test_lib_json/
+./jsoncpp_test
+popd
